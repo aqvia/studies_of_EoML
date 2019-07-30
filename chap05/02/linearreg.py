@@ -4,8 +4,7 @@ from scipy import linalg
 class LinearRegression:
     def __init__(self):
         self.w_ = None
-    
-    # 
+
     def fit(self, X, t):
         """
         訓練データによる学習
@@ -31,6 +30,10 @@ class LinearRegression:
         ----------
         X: ndarray
             評価用データ
+        
+        Returns
+        -------
+        ndarray 予測値
         """
         if X.ndim == 1:
             X = X.reshape(1, -1)
